@@ -24,4 +24,4 @@ jobs:
 
     - name: Test
       run: |
-        python run-tests.py --mpirun="mpirun -np 4"
+        python run-tests.py --mpirun="mpirun -np 2"
