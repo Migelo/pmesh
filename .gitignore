@@ -8,3 +8,4 @@ dist/
 pmesh/_invariant.c
 pmesh/_whitenoise.c
 pmesh/_window.c
+.venv/**
