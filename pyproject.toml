@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pmesh"
-version = "0.1.56"
+dynamic = ["version"]
 description = "Particle Mesh in Python"
 readme = "README.rst"
 authors = [{name = "Yu Feng"}]
@@ -43,6 +43,9 @@ Repository = "https://github.com/rainwoodman/pmesh"
 
 [tool.setuptools]
 packages = ["pmesh", "pmesh.tests"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pmesh.version.__version__"}
 
 [tool.setuptools.package-dir]
 pmesh = "pmesh"

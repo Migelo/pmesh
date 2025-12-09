@@ -22,8 +22,7 @@ Reference Manual
 
 Refer to http://rainwoodman.github.io/pmesh for a full API reference and installation guide.
 
-We recommended working with Anaconda's Python distribution. pmesh is available via the BCCP conda
-channel for Anaconda. Installing from the source requires installing pfft from source, and it may
+Installing from source requires installing pfft-python from source, and it may
 take a while to compile pfft.
 
 Description

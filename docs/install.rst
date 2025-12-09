@@ -1,42 +1,31 @@
 Installation
 ============
 
-Anaconda
---------
-
-With anaconda, a binary can be obtained from the BCCP channel via
-
-.. code-block:: sh
-
-    conda install -c bccp pmesh
-
-
 PyPI
 ----
 
+Install pmesh and its dependencies from PyPI:
+
 .. code-block:: sh
 
-    pip install pfft-python pmesh
+    pip install pmesh
 
 pmesh depends on `pfft-python <http://github.com/rainwoodman/pfft-python>`_ for fast fourier
-transformation.
+transformation, which will be installed automatically.
 
 
 For Development
 ---------------
 
-Recommended development environment is anaconda. First install pfft-python
-
-.. code-block:: sh
-
-    conda install -c bccp pfft-python runtests
-
-in development mode from git cloned version of source code.
+Clone the repository and install in development mode:
 
 .. code-block:: sh
 
     git clone https://github.com/rainwoodman/pmesh
     cd pmesh
+    pip install -e ".[full]"
+
+This will install pmesh in editable mode with all optional dependencies.
 
 The development shall ideally be test driven. Write test cases
 in the tests directories in the source code, then invoke them with

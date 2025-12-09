@@ -1,6 +1,3 @@
-from __future__ import print_function
-from __future__ import absolute_import
-
 from numpy.testing import assert_raises, assert_array_equal, assert_allclose
 import numpy
 import logging

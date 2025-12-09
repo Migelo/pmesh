@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 from warnings import warn
 
 warn("This module is deprecated and likely no longer maintained; a maintained version is moved to cosmo4d to minimize changes in pmesh.", DeprecationWarning)

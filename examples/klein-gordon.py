@@ -17,9 +17,9 @@
 
     Though that particular chapter may be updated for clarity in the future.
 
-    For a quick setup to run this script, download anaconda from continuum io, and run
+    For a quick setup to run this script, install pmesh with:
 
-    conda install -c bccp pmesh
+    pip install pmesh
 
 """
 

@@ -1,11 +1,41 @@
+# Build artifacts
 build/
-*.pyc
-pmesh/_domain.c
-MANIFEST
-*.so
 dist/
-**/*.egg-info
+*.egg-info/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.so
+
+# Generated C files from Cython
+pmesh/_domain.c
 pmesh/_invariant.c
 pmesh/_whitenoise.c
 pmesh/_window.c
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation
+docs/_build/
 .venv/**
