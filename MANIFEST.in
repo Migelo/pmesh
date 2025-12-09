@@ -1,6 +1,0 @@
-include pmesh/*.pyx
-include pmesh/*.h
-include pmesh/gsl/*.h
-include pmesh/gsl/*.c
-include pmesh/*.c
-include README.*
