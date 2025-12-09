@@ -10,12 +10,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v6
-    - name: Set up Python 3.11
+    - name: Set up Python 3.13
       uses: actions/setup-python@v3
       with:
-        python-version: '3.11'
+        python-version: '3.13'
     - name: Install dependencies
       run: |
+        pip install setuptools
         pip install Cython numpy
         sudo apt install -y libopenmpi-dev
         pip install mpi4py
