@@ -33,3 +33,34 @@ jobs:
     - name: Run tests
       run: |
         python run-tests.py --mpirun="mpirun -np 2"
+
+  test-optional:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libopenmpi-dev
+    
+    - name: Install Python dependencies with optional extras
+      run: |
+        pip install --upgrade pip setuptools
+        pip install runtests
+        pip install .[full]
+    
+    - name: Run tests with optional dependencies
+      run: |
+        python run-tests.py --mpirun="mpirun -np 2"
